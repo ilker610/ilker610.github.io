@@ -1,0 +1,152 @@
+.landing {
+	overflow: hidden;
+}
+
+.landing-grid {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 70vh auto;
+}
+
+.landing-content {
+	text-align: center;
+	padding: 20px;
+	z-index: 5;
+}
+
+.landing-title {
+	font-size: 5em;
+	font-weight: 900;
+	line-height: 1.1;
+	letter-spacing: 0.15em;
+}
+
+.landing-subtitle {
+	font-size: 1.25em;
+	font-weight: 500;
+	line-height: 1.1;
+	letter-spacing: 0.08em;
+}
+
+.socials {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--color-background-secondary);
+	margin-top: 1em;
+	border-radius: 8px;
+	padding: 0.3em 0.2em;
+	filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1));
+}
+
+.social {
+	margin: 0.5em;
+}
+
+.social-icon {
+	height: 1.8em;
+	fill: var(--color-primary);
+	filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+	transition: fill 0.1s;
+}
+
+.social-icon:hover {
+	fill: var(--color-hover);
+}
+
+
+.character-container {
+	position: relative;
+}
+
+.character {
+	height: 100vh;
+	margin-left: -3vw;
+	z-index: -1;
+}
+
+.Discord {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--color-background-secondary);
+	margin-top: 1em;
+	border-radius: 8px;
+}
+
+
+.secret-section {
+	height: 100px;
+	background-color: var(--color-background-secondary);
+	font-size: 0.8em;
+	/*filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));*/
+}
+
+
+@media only screen and (max-width: 900px),
+screen and (max-aspect-ratio: 12/9) {
+
+	.socials {
+		padding: 0.2em 0.1em;
+		filter: none;
+	}
+
+	.social {
+		margin: 0.4em;
+	}
+
+	.social-icon {
+		height: 1.5em;
+	}
+
+	.landing-grid {
+		grid-template-columns: none;
+		grid-template-rows: 40% auto;
+	}
+
+	.landing-title {
+		font-size: 3.3em;
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	}
+
+	.landing-subtitle {
+		font-size: 1em;
+		filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.8));
+	}
+
+	.character {
+		position: absolute;
+		margin: 0;
+		top: 0;
+		left: 50%;
+		height: 100vh;
+		transform: translateX(calc(-50% - 3vh));
+	}
+
+	.blob-darker {
+		display: none;
+	}
+
+
+	@media only screen and (max-width: 320px),
+	screen and (max-height: 570px) {
+
+		.landing-content {
+			padding: 10px;
+			font-size: 0.7em;
+		}
+	}
+
+	@media only screen and (max-width: 500px),
+	screen and (max-aspect-ratio: 10/16) {
+
+		.blob {
+			display: none;
+		}
+	}
+}
